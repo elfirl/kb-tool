@@ -1,0 +1,148 @@
+@import './assets/css/minima';
+
+//fonts 
+
+@font-face {
+  font-family: "xfinity";
+  src: url("./assets/fonts/xfinity/XFINITYStandard.otf");
+  }
+
+body {
+  font-family: 'xfinity';
+}
+
+// Home Modules
+
+.intro {
+  color: white;
+  text-align: center;
+}
+
+.support-container {
+  width: 100%;
+  text-align: center;
+}
+
+
+.support-module {
+  border-radius: 3px;
+  padding-top: 10px;
+  margin:20px 35px;
+  display: inline-block;
+  background-color: white;
+  min-width: 230px;
+  transition: 0.3s;
+      &:hover {
+          transition: 0.3s;
+          box-shadow: 0 5px 35px grey;
+          text-decoration: none;
+      }
+}
+
+.support-module p img {
+  border-radius: 4px;
+  height: 100px;
+  
+}
+
+.support-list {
+  list-style-type: none;
+  margin-left: 0px;
+}
+
+
+
+.support-browse {
+  background-color: #eff1f3;
+  padding:10px;
+  margin-bottom: 0px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  color: #424242;
+  display: none;
+}
+
+.page-content {
+  background-color: #183b56;
+}
+
+
+// Article Styles
+
+.articles {
+  // display: flex;
+  // align-content: center;
+  // justify-content: center;
+  background-color: white;
+  padding: 30px 20px;
+  margin: 0 auto;
+  max-width: 730px;
+}
+
+.post-content img {
+  display: block;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.post-content li {
+  margin-bottom: 10px;
+}
+
+
+// Everything Else
+
+.site-header {
+  background-color: #1F232E;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-title {
+  max-width: 30%;
+  margin: 10px;
+}
+
+.contact-info {
+  color: white;
+  text-align: center;
+}
+.contact-info img {
+  max-width: 30px;
+  margin: 0 15px;
+}
+
+//Footer
+.site-footer {
+  text-align: center;
+  background-color: black;
+}
+
+
+.footer-links {
+  margin: 10px 0;
+}
+
+//404 
+
+.four-zero-four {
+  color:white;
+}
+
+//eula
+
+.eula {
+  background-color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+//freshdesk
+
+.form-portal {
+  display: none !important;
+}
