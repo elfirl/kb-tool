@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 
 const users = require("./routes/api/users");
 const posts = require("./routes/api/posts");
+const fake = require("./routes/api/fake");
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.get("/", (req, res) => res.send("Hello!"));
 // Use Routes
 app.use("/api/users", users);
 app.use("/api/posts", posts);
+app.use("/api/fake", fake);
 
 const port = process.env.PORT || 5000;
 
