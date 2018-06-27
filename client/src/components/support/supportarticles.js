@@ -4,20 +4,33 @@ class SupportArticles extends Component {
   constructor() {
     super();
     this.state = {
-      article: []
+      articles: []
     };
   }
 
+  componentDidMount() {
+    fetch("http://localhost:5000/api/fake/test")
+      .then(res => res.json())
+      .then(articles =>
+        this.setState({ articles }, () =>
+          console.log("Articles fetched..", articles)
+        )
+      );
+  }
+
   render() {
-    return (
-      <ul className="support-list">
-        {this.state.article.map(article => (
-          <a href={"/this/"}>
-            <li />
+    let i;
+    const articleTitles = this.state.articles.map(article => {
+      for (i = 0; i < 3; i++) {
+        return (
+          <a>
+            <li>{article.category[i]}</li>
           </a>
-        ))}
-      </ul>
-    );
+        );
+      }
+    });
+
+    return <ul className="support-list">{articleTitles}</ul>;
   }
 }
 

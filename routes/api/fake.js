@@ -5,10 +5,10 @@ const router = express.Router();
 // @desc    Tests users route
 // @access  Public
 router.get("/test", (req, res) =>
-  res.json({
-    accounts: {
-      name: "Accounts",
+  res.json([
+    {
       id: "1",
+      category: "Accounts",
       articles: [
         {
           id: "1",
@@ -27,10 +27,9 @@ router.get("/test", (req, res) =>
         }
       ]
     },
-
-    locks: {
+    {
       id: "2",
-      name: "Locks",
+      category: "Locks",
       articles: [
         {
           id: "1",
@@ -49,10 +48,9 @@ router.get("/test", (req, res) =>
         }
       ]
     },
-
-    thermostats: {
+    {
       id: "3",
-      name: "Thermostats",
+      category: "Thermostats",
       articles: [
         {
           id: "1",
@@ -71,10 +69,9 @@ router.get("/test", (req, res) =>
         }
       ]
     },
-
-    lights: {
+    {
       id: "4",
-      name: "Lights",
+      category: "Lights",
       articles: [
         {
           id: "1",
@@ -93,7 +90,7 @@ router.get("/test", (req, res) =>
         }
       ]
     }
-  })
+  ])
 );
 
 module.exports = router;
